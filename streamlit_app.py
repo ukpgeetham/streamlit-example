@@ -7,5 +7,5 @@ if uploaded_file is not None:
     try:
         dataframe = pd.read_csv(uploaded_file)
     except Exception as e:
-        dataframe = pd.read_excel(uploaded_file)
+        dataframe = pd.read_excel(uploaded_file,engine='openpyxl')
 st.write(dataframe)
